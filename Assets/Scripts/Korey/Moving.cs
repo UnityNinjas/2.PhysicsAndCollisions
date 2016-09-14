@@ -289,14 +289,13 @@ public class Moving : MonoBehaviour
 
     public void Kick()
     {
-        this.animator.SetTrigger("NormalKick");
-
-        //if (this.isGrounded)
-        //{
-        //    this.animator.SetTrigger("LowerKick");
-        //}
-        //else
-        //{
-        //}
+        if (this.isGrounded)
+        {
+            this.animator.SetTrigger("NormalKick");
+        }
+        else
+        {
+            this.animator.SetTrigger("AirPunch");
+        }
     }
 }
